@@ -1,105 +1,147 @@
-/* Reset dan Umum */
-html, body {
-  height: 100%;
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f8ff;
-  color: #003366;
+  background-color: #fefefe;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
-  background: linear-gradient(135deg, #e6f0ff 0%, #a3c1f7 60%, #3a78d8 100%);
-  padding: 20px 40px;
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  box-shadow: 0 4px 10px rgba(58, 120, 216, 0.3);
-  background-image: linear-gradient(135deg, #e6f0ff 0%, #a3c1f7 60%, #3a78d8 100%),
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="%23ffffff" stroke-width="0.3"><circle cx="30" cy="30" r="1"/></svg>');
-  background-repeat: repeat;
-  background-blend-mode: overlay;
 }
 
 header h1 a {
-  color: #003366;
-  text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  text-shadow: 0 0 4px rgba(255,255,255,0.7);
-  cursor: pointer;
+  color: #00ffcc;
 }
 
-.menu {
+nav.menu {
   position: relative;
 }
 
 .menu-toggle {
   font-size: 2rem;
   cursor: pointer;
-  user-select: none;
+  display: none;
 }
 
-.dropdown {
+ul.dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #3a78d8;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(58, 120, 216, 0.5);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: all 0.3s ease;
+  background-color: #222;
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.menu:hover .dropdown {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+nav.menu:hover ul.dropdown {
+  display: flex;
 }
 
-.dropdown li a {
+ul.dropdown li a {
+  padding: 0.8rem 1rem;
   display: block;
-  padding: 12px 24px;
   color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
 }
 
-.dropdown li a:hover {
-  background-color: #1a4dbf;
-  border-radius: 10px;
+ul.dropdown li a:hover {
+  background-color: #00ffcc;
+  color: #000;
 }
 
-.content-section {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 30px 40px;
-  background-color: white;
-  border-left: 8px solid #3a78d8;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(58, 120, 216, 0.15);
-  color: #003366;
-  font-size: 1.1rem;
-  line-height: 1.6;
+/* Content */
+main.content-section,
+section.content-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
+main h2, section h2 {
+  color: #333;
+  border-bottom: 2px solid #00ffcc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+article {
+  margin-bottom: 2.5rem;
+  background: #fafafa;
+  padding: 1.5rem;
+  border-left: 4px solid #00ffcc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 6px;
+}
+
+article h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+article .meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  margin-top: 1rem;
+}
+
+.tags span {
+  background-color: #00ffcc;
+  color: black;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+/* Footer */
 footer {
-  background-color: #003366;
-  color: #dbeeff;
   text-align: center;
-  padding: 22px 0;
-  margin-top: auto;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
-  user-select: none;
+  padding: 1rem;
+  background-color: #eee;
+  color: #444;
+  margin-top: 3rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  ul.dropdown {
+    top: 3.5rem;
+    right: 0;
+    flex-direction: column;
+    width: 180px;
+  }
+
+  nav.menu:hover ul.dropdown {
+    display: flex;
+  }
 }
