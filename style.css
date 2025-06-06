@@ -127,29 +127,7 @@ header h1 a:hover {
   line-height: 1.6;
 }
 
-/* Galeri Foto (Grid Biasa, kalau mau pakai versi lain selain slider) */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 24px;
-  padding-bottom: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 6px 14px rgba(58, 120, 216, 0.2);
-  transition: transform 0.35s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 20px rgba(58, 120, 216, 0.35);
-}
-
-/* Galeri Slider (Satu Foto Sekaligus) */
+/* Slider */
 .slider-container {
   position: relative;
   max-width: 800px;
@@ -200,7 +178,7 @@ header h1 a:hover {
   right: 10px;
 }
 
-/* Responsif untuk HP (layar kecil) */
+/* Responsif untuk HP */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -232,9 +210,9 @@ header h1 a:hover {
     font-size: 0.9rem;
     padding: 16px 0;
   }
-  
 }
-/* Responsif untuk tablet (layar sedang) */
+
+/* Responsif untuk tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
   .button-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -243,8 +221,8 @@ header h1 a:hover {
   .content-section {
     padding: 25px 30px;
   }
-  
 }
+
 /* Footer Sticky */
 footer {
   flex-shrink: 0;
