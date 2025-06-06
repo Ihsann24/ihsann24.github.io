@@ -13,7 +13,7 @@ html, body {
 /* Header dengan tekstur gradasi dan noise ringan */
 header {
   background: linear-gradient(135deg, #e6f0ff 0%, #a3c1f7 60%, #3a78d8 100%);
-  color: white;
+  color: blue;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
