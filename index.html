@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>livelife.co</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,21 +26,21 @@
     <a href="javascript:void(0)" class="service-button" onclick="toggleContent('kopi')">Bagi Kopi</a>
   </main>
 
-<section id="foto" class="content-section" style="display: none;">
-  <h2>Bagi Foto</h2>
-  <div class="slider-container">
-    <button class="nav-button" onclick="prevSlide()">&#10094;</button>
-    <div class="slider">
-      <img class="slide" src="Foto1.png" alt="Foto 1" />
-      <img class="slide" src="Foto2.png" alt="Foto 2" />
-      <img class="slide" src="Foto3.png" alt="Foto 3" />
-      <img class="slide" src="Foto4.png" alt="Foto 4" />
-      <img class="slide" src="Foto5.png" alt="Foto 5" />
+  <section id="foto" class="content-section" style="display: none;">
+    <h2>Bagi Foto</h2>
+    <div class="slider-container">
+      <button class="nav-button" id="prev">&#10094;</button>
+      <div class="slider" id="slider">
+        <img src="img/Foto1.png" class="slide" alt="Foto 1" />
+        <img src="img/Foto2.png" class="slide" alt="Foto 2" />
+        <img src="img/Foto3.png" class="slide" alt="Foto 3" />
+        <img src="img/Foto4.png" class="slide" alt="Foto 4" />
+        <img src="img/Foto5.png" class="slide" alt="Foto 5" />
+      </div>
+      <button class="nav-button" id="next">&#10095;</button>
     </div>
-    <button class="nav-button" onclick="nextSlide()">&#10095;</button>
-  </div>
-</section>
-  
+  </section>
+
   <section id="data" class="content-section" style="display: none;">
     <h2>Bagi Data</h2>
     <p>Konten untuk layanan Bagi Data akan menyusul.</p>
@@ -68,30 +67,34 @@
         document.getElementById(section).style.display = section === id ? 'block' : 'none';
       });
     }
-  <script>
-    let currentSlide = 0;
 
-      function showSlide(index) {
-      const slides = document.querySelectorAll(".slide");
-      const totalSlides = slides.length;
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+    const slider = document.querySelector(".slider");
+
+    function showSlide(index) {
       if (index >= totalSlides) currentSlide = 0;
       else if (index < 0) currentSlide = totalSlides - 1;
       else currentSlide = index;
 
       const offset = -currentSlide * 100;
-        document.querySelector(".slider").style.transform = `translateX(${offset}%)`;
-  }
+      slider.style.transform = `translateX(${offset}%)`;
+    }
 
-      function nextSlide() {
+    function nextSlide() {
       showSlide(currentSlide + 1);
-  }
+    }
 
-      function prevSlide() {
+    function prevSlide() {
       showSlide(currentSlide - 1);
-  }
+    }
 
-        document.addEventListener("DOMContentLoaded", () => showSlide(0));
-</script>
-
+    document.addEventListener("DOMContentLoaded", () => {
+      showSlide(0);
+      document.getElementById('prev').addEventListener('click', prevSlide);
+      document.getElementById('next').addEventListener('click', nextSlide);
+    });
+  </script>
 </body>
 </html>
