@@ -29,8 +29,12 @@
 
   <section id="foto" class="content-section" style="display: none;">
     <h2>Bagi Foto</h2>
-    <img src="Foto1.png" alt="Foto1.png" style="max-width: 100%; height: auto; border-radius: 12px;" />
-    <p>Ini adalah foto yang dibagikan.</p>
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 4">
+    </div>
   </section>
 
   <section id="data" class="content-section" style="display: none;">
@@ -52,8 +56,17 @@
     <p>&copy; 2025 - Ihsan</p>
   </footer>
 
-  <!-- Script untuk toggle konten -->
   <script>
     function toggleContent(id) {
       const sections = document.querySelectorAll('.content-section');
-      sections.forEach(section =
+      sections.forEach(section => {
+        if (section.id === id) {
+          section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
