@@ -3,94 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>livelife</title>
+  <title>livelife.co</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1><a href="#" onclick="location.reload(); return false;">livelife</a></h1>
+    <h1><a href="#" onclick="location.reload();">livelife</a></h1>
     <nav class="menu">
       <div class="menu-toggle">&#9776;</div>
       <ul class="dropdown">
-        <li><a href="javascript:void(0)" onclick="toggleContent('foto')">Bagi Foto</a></li>
-        <li><a href="javascript:void(0)" onclick="toggleContent('data')">Bagi Data</a></li>
-        <li><a href="javascript:void(0)" onclick="toggleContent('desain')">Bagi Desain</a></li>
-        <li><a href="javascript:void(0)" onclick="toggleContent('kopi')">Bagi Kopi</a></li>
-        <li><a href="javascript:void(0)" onclick="toggleContent('kontak')">Kontak</a></li>
-        <li><a href="javascript:void(0)" onclick="toggleContent('faq')">FAQ</a></li>
+        <li><a href="#foto" onclick="showSection('foto')">Bagi Foto</a></li>
+        <li><a href="#data" onclick="showSection('data')">Bagi Data</a></li>
+        <li><a href="#desain" onclick="showSection('desain')">Bagi Desain</a></li>
+        <li><a href="#kopi" onclick="showSection('kopi')">Bagi Kopi</a></li>
+        <li><a href="#kontak" onclick="showSection('kontak')">Kontak</a></li>
+        <li><a href="#faq" onclick="showSection('faq')">FAQ</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="berita" class="content-section">
-      <h2>Berita Terbaru</h2>
-
-      <article class="berita-item">
-        <h3>Pelatihan Digitalisasi UMKM Resmi Dibuka</h3>
-        <p><em>6 Juni 2025</em></p>
-        <p>Pemerintah Kabupaten Pangandaran resmi membuka pelatihan digitalisasi bagi pelaku UMKM lokal. Kegiatan ini dihadiri oleh 100 peserta dari berbagai kecamatan.</p>
-      </article>
-
-      <article class="berita-item">
-        <h3>Satpol PP Gelar Razia Penertiban di Area Wisata</h3>
-        <p><em>4 Juni 2025</em></p>
-        <p>Razia dilakukan dalam rangka menjaga kenyamanan pengunjung dan ketertiban umum di kawasan wisata pantai.</p>
-      </article>
-
-      <article class="berita-item">
-        <h3>Distribusi SPPT dan Penarikan PBB-P2 Capai 70%</h3>
-        <p><em>1 Juni 2025</em></p>
-        <p>Hingga awal Juni, distribusi SPPT dan penarikan PBB-P2 telah mencapai 70% dari total 7.037 wajib pajak di wilayah desa target.</p>
-      </article>
-    </section>
-
-    <section id="foto" class="content-section" style="display:none;">
-      <h2>Bagi Foto</h2>
-      <p>Upload atau bagikan foto kegiatan di sini.</p>
-    </section>
-
-    <section id="data" class="content-section" style="display:none;">
-      <h2>Bagi Data</h2>
-      <p>Bagikan data atau dokumen penting di sini.</p>
-    </section>
-
-    <section id="desain" class="content-section" style="display:none;">
-      <h2>Bagi Desain</h2>
-      <p>Bagikan hasil desain atau infografis menarik di sini.</p>
-    </section>
-
-    <section id="kopi" class="content-section" style="display:none;">
-      <h2>Bagi Kopi</h2>
-      <p>Tempat berbagi opini, cerita santai, dan ide baru.</p>
-    </section>
-
-    <section id="kontak" class="content-section" style="display:none;">
-      <h2>Kontak</h2>
-      <p>Email: kamu@email.com</p>
-      <p>Telepon: +62 812-xxxx-xxxx</p>
-    </section>
-
-    <section id="faq" class="content-section" style="display:none;">
-      <h2>FAQ</h2>
-      <p><strong>Tanya:</strong> Siapa yang mengisi berita?<br><strong>Jawab:</strong> Admin (kamu sendiri).</p>
-    </section>
+  <main id="berita" class="content-section">
+    <h2>Berita Terkini</h2>
+    <p>Berita yang Anda publikasikan akan ditampilkan di sini.</p>
+    <article>
+      <h3>Judul Berita 1</h3>
+      <p>Isi berita pertama yang menarik dan informatif...</p>
+    </article>
+    <article>
+      <h3>Judul Berita 2</h3>
+      <p>Isi berita kedua dengan info terkini dan terpercaya...</p>
+    </article>
   </main>
 
+  <section id="foto" class="content-section" style="display: none;">
+    <h2>Bagi Foto</h2>
+    <p>Konten berbagi foto.</p>
+  </section>
+  <section id="data" class="content-section" style="display: none;">
+    <h2>Bagi Data</h2>
+    <p>Konten berbagi data.</p>
+  </section>
+  <section id="desain" class="content-section" style="display: none;">
+    <h2>Bagi Desain</h2>
+    <p>Konten berbagi desain.</p>
+  </section>
+  <section id="kopi" class="content-section" style="display: none;">
+    <h2>Bagi Kopi</h2>
+    <p>Konten berbagi kopi.</p>
+  </section>
+  <section id="kontak" class="content-section" style="display: none;">
+    <h2>Kontak</h2>
+    <p>Email: info@livelife.co | Telp: 08xx-xxxx-xxxx</p>
+  </section>
+  <section id="faq" class="content-section" style="display: none;">
+    <h2>FAQ</h2>
+    <p>Pertanyaan umum seputar layanan livelife.</p>
+  </section>
+
   <footer>
-    &copy; 2025 livelife. Semua Hak Dilindungi.
+    <p>&copy; 2025 - livelife.co</p>
   </footer>
 
   <script>
-    const sections = ['berita', 'foto', 'data', 'desain', 'kopi', 'kontak', 'faq'];
-    function toggleContent(id) {
-      sections.forEach(section => {
+    function showSection(id) {
+      const allSections = ['foto', 'data', 'desain', 'kopi', 'kontak', 'faq'];
+      allSections.forEach(section => {
         document.getElementById(section).style.display = section === id ? 'block' : 'none';
       });
+      document.getElementById('berita').style.display = 'none';
     }
-    document.addEventListener("DOMContentLoaded", () => {
-      toggleContent("berita");
-    });
   </script>
 </body>
 </html>
