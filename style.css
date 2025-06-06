@@ -46,18 +46,6 @@ main.button-grid {
 }
 
 .service-button {
-  background-color: #0044cc;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 1.2em;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.service-button {
   background: linear-gradient(90deg, #0044cc, #0066ff);
   color: #ffffff;
   text-decoration: none;
