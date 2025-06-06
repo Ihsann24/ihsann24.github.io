@@ -5,50 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>livelife.co</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
   <header>
-  <h1>livelife</h1>
-  <nav class="menu">
-    <div class="menu-toggle">&#9776;</div>
-    <ul class="dropdown">
-      <li><a href="#berita">Berita</a></li>
-      <li><a href="#info">Info</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </nav>
+    <h1>livelife</h1>
+    <nav class="menu">
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="dropdown">
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#info">Info</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
   </header>
 
-<main class="button-grid">
-  <a href="javascript:void(0)" class="service-button" onclick="toggleContent('foto')">Bagi Foto</a>
-  <a href="javascript:void(0)" class="service-button" onclick="toggleContent('data')">Bagi Data</a>
-  <a href="javascript:void(0)" class="service-button" onclick="toggleContent('desain')">Bagi Desain</a>
-  <a href="javascript:void(0)" class="service-button" onclick="toggleContent('kopi')">Bagi Kopi</a>
-</main>
+  <main class="button-grid">
+    <a href="javascript:void(0)" class="service-button" onclick="toggleContent('foto')">Bagi Foto</a>
+    <a href="javascript:void(0)" class="service-button" onclick="toggleContent('data')">Bagi Data</a>
+    <a href="javascript:void(0)" class="service-button" onclick="toggleContent('desain')">Bagi Desain</a>
+    <a href="javascript:void(0)" class="service-button" onclick="toggleContent('kopi')">Bagi Kopi</a>
+  </main>
 
-<section id="foto" class="content-section" style="display: none;">
-  <h2>Bagi Foto</h2>
-  <p>Konten untuk layanan Bagi Foto akan menyusul.</p>
-</section>
+  <section id="foto" class="content-section" style="display: none;">
+    <h2>Bagi Foto</h2>
+    <p>Konten untuk layanan Bagi Foto akan menyusul.</p>
+  </section>
 
-<section id="data" class="content-section" style="display: none;">
-  <h2>Bagi Data</h2>
-  <p>Konten untuk layanan Bagi Data akan menyusul.</p>
-</section>
+  <section id="data" class="content-section" style="display: none;">
+    <h2>Bagi Data</h2>
+    <p>Konten untuk layanan Bagi Data akan menyusul.</p>
+  </section>
 
-<section id="desain" class="content-section" style="display: none;">
-  <h2>Bagi Desain</h2>
-  <p>Konten untuk layanan Bagi Desain akan menyusul.</p>
-</section>
+  <section id="desain" class="content-section" style="display: none;">
+    <h2>Bagi Desain</h2>
+    <p>Konten untuk layanan Bagi Desain akan menyusul.</p>
+  </section>
 
-<section id="kopi" class="content-section" style="display: none;">
-  <h2>Bagi Kopi</h2>
-  <p>Konten untuk layanan Bagi Kopi akan menyusul.</p>
-</section>
+  <section id="kopi" class="content-section" style="display: none;">
+    <h2>Bagi Kopi</h2>
+    <p>Konten untuk layanan Bagi Kopi akan menyusul.</p>
+  </section>
 
   <footer>
     <p>&copy; 2025 - Ihsan</p>
   </footer>
-</body>
-</html>
 
+  <!-- Script untuk toggle konten -->
+  <script>
+    function toggleContent(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section =
