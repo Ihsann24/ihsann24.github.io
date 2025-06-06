@@ -149,6 +149,56 @@ header h1 a:hover {
   transform: scale(1.07);
   box-shadow: 0 8px 20px rgba(58, 120, 216, 0.35);
 }
+/* --- kode style lain di atas --- */
+
+/* Galeri Foto Slider */
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(10, 25, 47, 0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: rgba(10, 25, 47, 0.9);
+}
+
+.nav-button:first-of-type {
+  left: 10px;
+}
+
+.nav-button:last-of-type {
+  right: 10px;
+}
 
 /* Footer sticky di bawah */
 footer {
