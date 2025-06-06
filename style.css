@@ -2,12 +2,13 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f5faff;
-  color: #333;
+  background: #dbeeff;
+  color: #0a192f;
 }
 
+/* Header */
 header {
-  background: linear-gradient(90deg, #0d1b2a, #1e3a5f);
+  background: linear-gradient(135deg, #0a192f, #4b6cb7);
   color: white;
   padding: 20px;
   display: flex;
@@ -20,6 +21,7 @@ h1 {
   font-size: 1.8rem;
 }
 
+/* Menu Dropdown */
 .menu-toggle {
   font-size: 1.5rem;
   cursor: pointer;
@@ -47,14 +49,14 @@ h1 {
 }
 
 .menu .dropdown li a:hover {
-  background-color: #3c6cae;
+  background-color: #0077ff;
 }
 
 .menu:hover .dropdown {
   display: block;
 }
 
-/* Tombol Layanan */
+/* Grid Tombol */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -63,29 +65,32 @@ h1 {
 }
 
 .service-button {
-  background: linear-gradient(135deg, #0d1b2a, #1e3a5f);
+  background: linear-gradient(135deg, #0077ff, #4b6cb7);
   color: white;
   padding: 16px;
   text-align: center;
   text-decoration: none;
   border-radius: 12px;
   font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .service-button:hover {
+  background: linear-gradient(135deg, #005ce6, #0077ff);
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #1e3a5f, #3c6cae);
 }
 
 /* Konten */
 .content-section {
   padding: 20px 40px;
   background-color: white;
+  border-left: 6px solid #0077ff;
+  margin: 20px;
+  border-radius: 8px;
 }
 
-/* Galeri */
+/* Galeri Foto */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -109,7 +114,7 @@ h1 {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #0d1b2a;
+  background-color: #0a192f;
   color: white;
   margin-top: 40px;
 }
