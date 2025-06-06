@@ -1,55 +1,69 @@
-/* Umum */
-body {
+/* Reset dan Umum */
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #dbeeff;
-  color: #0a192f;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f8ff; /* putih kebiruan, lembut */
+  color: #003366; /* biru tua elegan */
 }
 
-/* Header */
+/* Header dengan tekstur gradasi dan noise ringan */
 header {
-  background: linear-gradient(135deg, #0a192f, #4b6cb7);
+  background: linear-gradient(135deg, #e6f0ff 0%, #a3c1f7 60%, #3a78d8 100%);
   color: white;
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(58, 120, 216, 0.3);
+  font-weight: 600;
+  /* Tambah tekstur noise halus via filter */
+  background-image: 
+    linear-gradient(135deg, #e6f0ff 0%, #a3c1f7 60%, #3a78d8 100%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="%23ffffff" stroke-width="0.3"><circle cx="30" cy="30" r="1"/></svg>');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
 }
 
+/* Judul */
 h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 4px rgba(255,255,255,0.7);
 }
 
-/* Menu Dropdown */
-.menu-toggle {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
-
+/* Dropdown Menu */
 .menu .dropdown {
   list-style: none;
   margin: 0;
   padding: 0;
   display: none;
-  background-color: #1e3a5f;
+  background-color: #3a78d8;
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 70px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(58, 120, 216, 0.5);
+  z-index: 1000;
 }
 
 .menu .dropdown li a {
   display: block;
-  padding: 12px 20px;
+  padding: 12px 24px;
   color: white;
   text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .menu .dropdown li a:hover {
-  background-color: #0077ff;
+  background-color: #1a4dbf;
+  border-radius: 10px;
 }
 
 .menu:hover .dropdown {
@@ -59,76 +73,20 @@ h1 {
 /* Grid Tombol */
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
   padding: 40px;
+  max-width: 1100px;
+  margin: auto;
 }
 
+/* Tombol dengan gradasi dan tekstur lembut */
 .service-button {
-  background: linear-gradient(135deg, #0077ff, #4b6cb7);
+  background: linear-gradient(145deg, #79a7ff, #3a78d8);
   color: white;
-  padding: 16px;
+  padding: 18px 0;
   text-align: center;
   text-decoration: none;
-  border-radius: 12px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.service-button:hover {
-  background: linear-gradient(135deg, #005ce6, #0077ff);
-  transform: translateY(-3px);
-}
-
-/* Konten */
-.content-section {
-  padding: 20px 40px;
-  background-color: white;
-  border-left: 6px solid #0077ff;
-  margin: 20px;
-  border-radius: 8px;
-}
-
-/* Galeri Foto */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-main, .button-grid, section {
-  flex: 1 0 auto;
-}
-
-footer {
-  flex-shrink: 0;
-  background-color: #0a192f;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: auto;
-  position: relative;
-  width: 100%;
-}
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1
