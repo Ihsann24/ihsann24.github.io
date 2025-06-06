@@ -6,18 +6,19 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a0a0a;
-  color: #e0f0ff;
+  background-color: #ffffff;
+  color: #003366;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-  background: linear-gradient(90deg, #003366, #005599);
+  background: linear-gradient(90deg, #0044cc, #0066ff);
+  color: white;
   padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -34,11 +35,10 @@ main.button-grid {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 40px 20px;
-  background-color: #001122;
 }
 
 .service-button {
-  background-color: #002244;
+  background-color: #0044cc;
   color: #ffffff;
   text-decoration: none;
   padding: 20px;
@@ -46,33 +46,34 @@ main.button-grid {
   text-align: center;
   font-size: 1.2em;
   transition: background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .service-button:hover {
-  background-color: #0044cc;
+  background-color: #0066ff;
 }
 
 .content-section {
   padding: 30px 20px;
   max-width: 800px;
   margin: 20px auto;
-  background-color: #001933;
+  background-color: #f0f8ff;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,50,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .content-section h2 {
   margin-bottom: 15px;
-  color: #aad4ff;
+  color: #003366;
 }
 
 footer {
-  background-color: #001122;
+  background-color: #003366;
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
-  color: #99bbdd;
+  color: #ffffff;
   margin-top: auto;
 }
+
 
