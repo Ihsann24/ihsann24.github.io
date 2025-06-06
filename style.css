@@ -10,10 +10,10 @@ html, body {
   color: #003366; /* biru tua elegan */
 }
 
-/* Header dengan tekstur gradasi dan noise ringan */
+/* Header */
 header {
   background: linear-gradient(135deg, #e6f0ff 0%, #a3c1f7 60%, #3a78d8 100%);
-  color: blue;
+  color: #003366;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -28,9 +28,8 @@ header {
   background-blend-mode: overlay;
 }
 
-/* Styling judul livelife sebagai link */
 header h1 a {
-  color: #003366; /* biru tua */
+  color: #003366;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -40,7 +39,7 @@ header h1 a {
 }
 
 header h1 a:hover {
-  color: #0059b3; /* biru agak lebih terang saat hover */
+  color: #0059b3;
 }
 
 /* Dropdown Menu */
@@ -86,7 +85,7 @@ header h1 a:hover {
   margin: auto;
 }
 
-/* Tombol dengan gradasi dan tekstur lembut */
+/* Tombol Stylish */
 .service-button {
   background: linear-gradient(145deg, #79a7ff, #3a78d8);
   color: white;
@@ -106,7 +105,6 @@ header h1 a:hover {
   overflow: hidden;
 }
 
-/* Efek hover tombol */
 .service-button:hover {
   background: linear-gradient(145deg, #547bdd, #2555a3);
   box-shadow:
@@ -129,12 +127,13 @@ header h1 a:hover {
   line-height: 1.6;
 }
 
-/* Galeri Foto */
+/* Galeri Foto (Grid Biasa, kalau mau pakai versi lain selain slider) */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 24px;
+  padding-bottom: 20px;
 }
 
 .gallery img {
@@ -149,16 +148,16 @@ header h1 a:hover {
   transform: scale(1.07);
   box-shadow: 0 8px 20px rgba(58, 120, 216, 0.35);
 }
-/* --- kode style lain di atas --- */
 
-/* Galeri Foto Slider */
+/* Galeri Slider (Satu Foto Sekaligus) */
 .slider-container {
   position: relative;
   max-width: 800px;
   margin: 20px auto;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f5faff;
 }
 
 .slider {
@@ -182,14 +181,15 @@ header h1 a:hover {
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 14px;
   border-radius: 50%;
   z-index: 10;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .nav-button:hover {
   background-color: rgba(10, 25, 47, 0.9);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .nav-button:first-of-type {
@@ -200,7 +200,7 @@ header h1 a:hover {
   right: 10px;
 }
 
-/* Footer sticky di bawah */
+/* Footer Sticky */
 footer {
   flex-shrink: 0;
   background-color: #003366;
