@@ -68,32 +68,30 @@
       });
     }
 
+    // Slider JS
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
     const totalSlides = slides.length;
-    const slider = document.querySelector(".slider");
+    const slider = document.getElementById("slider");
 
     function showSlide(index) {
       if (index >= totalSlides) currentSlide = 0;
       else if (index < 0) currentSlide = totalSlides - 1;
       else currentSlide = index;
-
-      const offset = -currentSlide * 100;
-      slider.style.transform = `translateX(${offset}%)`;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
-    function nextSlide() {
+    document.getElementById("next").addEventListener("click", () => {
       showSlide(currentSlide + 1);
-    }
+    });
 
-    function prevSlide() {
+    document.getElementById("prev").addEventListener("click", () => {
       showSlide(currentSlide - 1);
-    }
+    });
 
+    // Initialize slider saat halaman siap
     document.addEventListener("DOMContentLoaded", () => {
       showSlide(0);
-      document.getElementById('prev').addEventListener('click', prevSlide);
-      document.getElementById('next').addEventListener('click', nextSlide);
     });
   </script>
 </body>
