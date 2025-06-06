@@ -1,156 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>livelife.co</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>livelife</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1><a href="https://ihsann24.github.io/" target="_blank" rel="noopener noreferrer">livelife</a></h1>
-    <nav class="top-menu">
-      <a href="javascript:void(0)" class="service-button" onclick="toggleContent('foto')">Bagi Foto</a>
-      <a href="javascript:void(0)" class="service-button" onclick="toggleContent('data')">Bagi Data</a>
-      <a href="javascript:void(0)" class="service-button" onclick="toggleContent('desain')">Bagi Desain</a>
-      <a href="javascript:void(0)" class="service-button" onclick="toggleContent('kopi')">Bagi Kopi</a>
+    <h1><a href="#" onclick="location.reload(); return false;">livelife</a></h1>
+    <nav class="menu">
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="dropdown">
+        <li><a href="javascript:void(0)" onclick="toggleContent('foto')">Bagi Foto</a></li>
+        <li><a href="javascript:void(0)" onclick="toggleContent('data')">Bagi Data</a></li>
+        <li><a href="javascript:void(0)" onclick="toggleContent('desain')">Bagi Desain</a></li>
+        <li><a href="javascript:void(0)" onclick="toggleContent('kopi')">Bagi Kopi</a></li>
+        <li><a href="javascript:void(0)" onclick="toggleContent('kontak')">Kontak</a></li>
+        <li><a href="javascript:void(0)" onclick="toggleContent('faq')">FAQ</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section id="upload-berita" class="upload-section">
-      <h2>Unggah Berita</h2>
-      <form id="formBerita" onsubmit="return handleSubmit(event)">
-        <label for="judul">Judul Berita</label>
-        <input type="text" id="judul" name="judul" required placeholder="Masukkan judul berita..." />
+    <section id="berita" class="content-section">
+      <h2>Berita Terbaru</h2>
 
-        <label for="isi">Isi Berita</label>
-        <textarea id="isi" name="isi" rows="6" required placeholder="Masukkan isi berita..."></textarea>
+      <article class="berita-item">
+        <h3>Pelatihan Digitalisasi UMKM Resmi Dibuka</h3>
+        <p><em>6 Juni 2025</em></p>
+        <p>Pemerintah Kabupaten Pangandaran resmi membuka pelatihan digitalisasi bagi pelaku UMKM lokal. Kegiatan ini dihadiri oleh 100 peserta dari berbagai kecamatan.</p>
+      </article>
 
-        <label for="gambar">Unggah Gambar</label>
-        <input type="file" id="gambar" name="gambar" accept="image/*" onchange="previewImage(event)" />
+      <article class="berita-item">
+        <h3>Satpol PP Gelar Razia Penertiban di Area Wisata</h3>
+        <p><em>4 Juni 2025</em></p>
+        <p>Razia dilakukan dalam rangka menjaga kenyamanan pengunjung dan ketertiban umum di kawasan wisata pantai.</p>
+      </article>
 
-        <div class="preview-container" id="previewContainer" style="display:none;">
-          <p>Preview Gambar:</p>
-          <img id="previewImg" alt="Preview gambar berita" />
-        </div>
-
-        <button type="submit" class="btn-submit">Kirim Berita</button>
-      </form>
+      <article class="berita-item">
+        <h3>Distribusi SPPT dan Penarikan PBB-P2 Capai 70%</h3>
+        <p><em>1 Juni 2025</em></p>
+        <p>Hingga awal Juni, distribusi SPPT dan penarikan PBB-P2 telah mencapai 70% dari total 7.037 wajib pajak di wilayah desa target.</p>
+      </article>
     </section>
 
     <section id="foto" class="content-section" style="display:none;">
       <h2>Bagi Foto</h2>
-      <div class="slider-container">
-        <button class="nav-button" id="prev">&#10094;</button>
-        <div class="slider" id="slider">
-          <img src="img/Foto1.png" class="slide" alt="Foto 1" />
-          <img src="img/Foto2.png" class="slide" alt="Foto 2" />
-          <img src="img/Foto3.png" class="slide" alt="Foto 3" />
-          <img src="img/Foto4.png" class="slide" alt="Foto 4" />
-          <img src="img/Foto5.png" class="slide" alt="Foto 5" />
-        </div>
-        <button class="nav-button" id="next">&#10095;</button>
-      </div>
+      <p>Upload atau bagikan foto kegiatan di sini.</p>
     </section>
 
     <section id="data" class="content-section" style="display:none;">
       <h2>Bagi Data</h2>
-      <p>Konten untuk layanan Bagi Data akan menyusul.</p>
+      <p>Bagikan data atau dokumen penting di sini.</p>
     </section>
 
     <section id="desain" class="content-section" style="display:none;">
       <h2>Bagi Desain</h2>
-      <p>Konten untuk layanan Bagi Desain akan menyusul.</p>
+      <p>Bagikan hasil desain atau infografis menarik di sini.</p>
     </section>
 
     <section id="kopi" class="content-section" style="display:none;">
       <h2>Bagi Kopi</h2>
-      <p>Konten untuk layanan Bagi Kopi akan menyusul.</p>
+      <p>Tempat berbagi opini, cerita santai, dan ide baru.</p>
+    </section>
+
+    <section id="kontak" class="content-section" style="display:none;">
+      <h2>Kontak</h2>
+      <p>Email: kamu@email.com</p>
+      <p>Telepon: +62 812-xxxx-xxxx</p>
+    </section>
+
+    <section id="faq" class="content-section" style="display:none;">
+      <h2>FAQ</h2>
+      <p><strong>Tanya:</strong> Siapa yang mengisi berita?<br><strong>Jawab:</strong> Admin (kamu sendiri).</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 - Ihsan</p>
+    &copy; 2025 livelife. Semua Hak Dilindungi.
   </footer>
 
   <script>
-    // Toggle tampilan konten menu
+    const sections = ['berita', 'foto', 'data', 'desain', 'kopi', 'kontak', 'faq'];
     function toggleContent(id) {
-      const sections = ['foto', 'data', 'desain', 'kopi'];
       sections.forEach(section => {
         document.getElementById(section).style.display = section === id ? 'block' : 'none';
       });
-      // Sembunyikan upload berita saat buka menu
-      document.getElementById('upload-berita').style.display = 'none';
     }
-
-    // Preview gambar sebelum upload
-    function previewImage(event) {
-      const previewContainer = document.getElementById('previewContainer');
-      const previewImg = document.getElementById('previewImg');
-      const file = event.target.files[0];
-
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = e => {
-          previewImg.src = e.target.result;
-          previewContainer.style.display = 'block';
-        };
-        reader.readAsDataURL(file);
-      } else {
-        previewImg.src = '';
-        previewContainer.style.display = 'none';
-      }
-    }
-
-    // Handle submit form berita
-    function handleSubmit(event) {
-      event.preventDefault();
-
-      const judul = document.getElementById('judul').value.trim();
-      const isi = document.getElementById('isi').value.trim();
-
-      if (!judul || !isi) {
-        alert('Judul dan isi berita wajib diisi.');
-        return false;
-      }
-
-      alert(`Berita dengan judul:\n"${judul}"\nberhasil dikirim! (Simulasi)`);
-
-      // Reset form dan preview
-      event.target.reset();
-      document.getElementById('previewImg').src = '';
-      document.getElementById('previewContainer').style.display = 'none';
-
-      return false;
-    }
-
-    // Slider JS untuk Bagi Foto
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
-    const totalSlides = slides.length;
-    const slider = document.getElementById("slider");
-
-    function showSlide(index) {
-      if (index >= totalSlides) currentSlide = 0;
-      else if (index < 0) currentSlide = totalSlides - 1;
-      else currentSlide = index;
-      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-
-    document.getElementById("next").addEventListener("click", () => {
-      showSlide(currentSlide + 1);
-    });
-
-    document.getElementById("prev").addEventListener("click", () => {
-      showSlide(currentSlide - 1);
-    });
-
-    // Tampilkan halaman upload berita saat mulai
     document.addEventListener("DOMContentLoaded", () => {
-      showSlide(0);
-      document.getElementById('upload-berita').style.display = 'block';
+      toggleContent("berita");
     });
   </script>
 </body>
